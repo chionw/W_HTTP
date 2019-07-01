@@ -303,7 +303,7 @@ int W_HTTP::run(W_HTTP_RESPONSE_HEADER &_resp_header, string &_recvData)
 	{
 		int res = mg_mgr_poll(&mgr, 1000);
 		
-		if (res == 5 || mgr.active_connections == nullptr)
+		if (/*res == 5 || */mgr.active_connections == nullptr)
 		{
 			break;
 		}
